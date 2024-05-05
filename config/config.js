@@ -10,6 +10,8 @@ const environments = {
         db_password: process.env.DB_PASSWORD,
         db_host: process.env.DB_HOST,
         db_dialect: process.env.DB_DIALECT,
+        // jwt
+        jwt_secret: process.env.JWT_SECRET,
     },
     production: {
         // server
@@ -20,6 +22,8 @@ const environments = {
         db_password: process.env.DB_PASSWORD_PRODUCTION,
         db_host: process.env.DB_HOST_PRODUCTION,
         db_dialect: process.env.DB_DIALECT_PRODUCTION,
+        // jwt
+        jwt_secret: process.env.JWT_SECRET,
     },
     // other environments...
 };
