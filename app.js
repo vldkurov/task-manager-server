@@ -49,10 +49,6 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/auth', authRouter);
 
-// // Protected route
-// router.get('/', checkTokenValidity, (req, res) => {
-//     res.status(200).json({ message: 'Protected route accessed successfully' });
-// });
 
 sequelize.authenticate()
     .then(() => console.log('Connection to database has been established successfully.'))
