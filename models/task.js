@@ -28,7 +28,8 @@ const Task = sequelize.define('Task', {
     },
     userId: {
         type: DataTypes.UUID,
-        allowNull: false
+        allowNull: false,
+        references: {model: 'users', key: 'id'},
     }
 }, {timestamps: true, tableName: 'tasks'})
 
