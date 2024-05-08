@@ -1,6 +1,7 @@
 const sequelize = require('./database');
 require('../models/index');
 
+
 sequelize.sync({force: true})
     .then(() => {
         console.log('Database tables created successfully.');

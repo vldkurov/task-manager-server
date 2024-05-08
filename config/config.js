@@ -1,4 +1,5 @@
-require('dotenv').config({path: '../.env'});
+// require('dotenv').config({path: '../.env'});
+require('dotenv').config();
 
 const environments = {
     development: {
@@ -10,6 +11,7 @@ const environments = {
         db_password: process.env.DB_PASSWORD,
         db_host: process.env.DB_HOST,
         db_dialect: process.env.DB_DIALECT,
+        useSSL: false,
         // jwt
         jwt_secret: process.env.JWT_SECRET,
     },
@@ -22,6 +24,7 @@ const environments = {
         db_password: process.env.DB_PASSWORD_PRODUCTION,
         db_host: process.env.DB_HOST_PRODUCTION,
         db_dialect: process.env.DB_DIALECT_PRODUCTION,
+        useSSL: true,
         // jwt
         jwt_secret: process.env.JWT_SECRET,
     },
