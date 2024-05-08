@@ -15,6 +15,7 @@ const app = express();
 
 const whitelist = [
     // 'https://thunderous-moxie-f4ffbe.netlify.app', 'https://main--thunderous-moxie-f4ffbe.netlify.app', 'https://my-ecommerce-client.vercel.app',
+    'https://enchanting-dango-e9c386.netlify.app', 'https://main--enchanting-dango-e9c386.netlify.app',
     'http://localhost:3000'
 ];
 
