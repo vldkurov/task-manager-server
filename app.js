@@ -50,6 +50,9 @@ app.use('/', indexRouter);
 app.use('/auth', authRouter);
 app.use('/tasks', tasksRouter);
 
+app.get("/health", (req, res) => {
+    res.sendStatus(200)
+});
 
 sequelize.authenticate()
     .then(() => console.log('Connection to database has been established successfully.'))
