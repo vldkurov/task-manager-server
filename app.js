@@ -7,7 +7,6 @@ const logger = require('morgan');
 const cors = require('cors');
 
 const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
 const authRouter = require('./routes/auth');
 const tasksRouter = require('./routes/tasks');
 const sequelize = require("./config/database");
@@ -15,7 +14,6 @@ const sequelize = require("./config/database");
 const app = express();
 
 const whitelist = [
-    // 'https://thunderous-moxie-f4ffbe.netlify.app', 'https://main--thunderous-moxie-f4ffbe.netlify.app', 'https://my-ecommerce-client.vercel.app',
     'https://enchanting-dango-e9c386.netlify.app', 'https://main--enchanting-dango-e9c386.netlify.app',
     'http://localhost:3000'
 ];
@@ -49,7 +47,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/auth', authRouter);
 app.use('/tasks', tasksRouter);
 
