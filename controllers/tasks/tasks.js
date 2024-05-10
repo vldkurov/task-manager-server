@@ -9,7 +9,7 @@ exports.createTask = async (req, res) => {
             priority: req.body.priority,
             status: req.body.status,
             dueDate: req.body.dueDate,
-            userId: req.user.id  // Use the userId from the auth middleware
+            userId: req.user.id
         });
         res.status(201).json(task);
     } catch (error) {
